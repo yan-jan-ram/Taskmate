@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import TaskListItems from "./TaskListItems";
-import "./listItems.css";
+import style from "./listItems.module.css";
 
 const ListItems = () => {
   const [items, setItems] = useState([
@@ -13,15 +13,15 @@ const ListItems = () => {
 
   const [show, setShow] = useState(true);
 
-  const handleDelete = (id) => [
-    setItems(items.filter((task) => task.id !== id))
-  ];
+  const handleDelete = (id) => {
+    setItems(items.filter((task) => task.id !== id));
+  };
 
   return (
-    <div className="data">
-      <h1 className="list">List Items</h1>
-      <button className="toggle" onClick={() => setShow(!show)}>
-        Toggle
+    <div className={style.data}>
+      <h1 className={style.list}>List Items</h1>
+      <button className={style.toggle} onClick={() => setShow(!show)}>
+        {show ? "Hide" : "Show"}
       </button>
       <ul>
         {show &&
