@@ -1,0 +1,30 @@
+.addTask {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: darkorchid;
+  font-weight: 600;
+}
+
+.textInput {
+  color: forestgreen;
+}
+
+.textInput:focus {
+  box-shadow: 2px 0px 8px 2px rgba(100, 55, 300, 2);
+}
+
+.addBtn {
+  background-color: green;
+}
+
+.reset{
+  background-color: crimson;
+}
+
+.progress{
+  width: 100px;
+  height: 20px;
+  background-color: black;
+  color: yellow;
+}

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import TaskListItems from "./TaskListItems";
+import AddTask from './AddTask.js'
 import style from "./listItems.module.css";
 
 const ListItems = () => {
@@ -18,8 +19,10 @@ const ListItems = () => {
   };
 
   return (
-    <div className={style.data}>
-      <h1 className={style.list}>List Items</h1>
+    <div>
+      <h1 className={style.dataHeading}>Add list</h1>
+      <AddTask />
+      <h1 className={style.listHeading}>List Items</h1>
       <button className={style.toggle} onClick={() => setShow(!show)}>
         {show ? "Hide" : "Show"}
       </button>
@@ -28,7 +31,7 @@ const ListItems = () => {
           items.map((item) => (
             <TaskListItems
               key={item.id}
-              tasks={item}
+              task={item}
               deleteTask={handleDelete}
             />
           ))}
