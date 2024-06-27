@@ -6,3 +6,9 @@
     font-size: xxx-large;
     text-shadow: 2px 2px 4px rgba(29, 18, 230, 0.5);
   }
+  .intro{
+    display: grid;
+    place-items: center;
+    color: blue;
+    padding: 20px;
+  }

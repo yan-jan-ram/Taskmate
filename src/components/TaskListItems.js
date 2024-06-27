@@ -5,9 +5,9 @@ import styling from "./taskListItems.module.css";
 const TaskListItems = ({ task, deleteTask }) => {
   return (
     <>
-      <li className={task.isMarried ? style.married : style.single}>
+      <li key={task.id}>
         <span className={styling.data}>
-          {task.id} - {task.name} - {task.age} - {task.status}{" "}
+          {task.id} - {task.taskName} - {task.status ? "Completed" : "Pending"}{" "}
         </span>{" "}
         <button
           className={style.delete}

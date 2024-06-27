@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import style from "./addTask.module.css";
 
-const AddTask = () => {
-  const [text, setText] = useState("");
+const AddTask = ({ tasks, setTasks }) => {
+  const [task, setTask] = useState("");
   const [progress, setProgress] = useState(false);
 
   const handleChange = (e) => {
@@ -10,23 +10,23 @@ const AddTask = () => {
       alert("The character length exceeded 25");
       return;
     }
-    setText(e.target.value);
+    setTask(e.target.value);
   };
 
   const handleReset = (e) => {
-    setText("");
+    setTask("");
     setProgress(false);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const task = {
+    const info = {
       id: Math.floor(Math.random() * 10000),
-      taskName: text,
+      taskName: task,
       status: Boolean(progress),
     };
+    setTasks([...tasks, info]);
     handleReset();
-    console.log(task);
   };
 
   return (
@@ -39,7 +39,7 @@ const AddTask = () => {
             type="text"
             name="task"
             id="task"
-            value={text}
+            value={task}
             autoComplete="off"
             placeholder="Task Name"
           />{" "}
@@ -58,8 +58,8 @@ const AddTask = () => {
           <button className={style.reset} type="button" onClick={handleReset}>
             Reset
           </button>
-          <p>Text: {text}</p>
-          <p>Text-Length: {text.length}</p>
+          <p>Task: {task}</p>
+          <p>Task-Length: {task.length}</p>
         </form>
       </section>
     </div>

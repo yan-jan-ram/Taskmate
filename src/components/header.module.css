@@ -6,8 +6,8 @@
   padding: 8px;
   border: 2px solid #ccc;
   border-radius: 4px;
-  background-color: white;
-  color: black;
+  background-color: cornflowerblue;
+  color: white;
   font-style: oblique;
   font-size: medium;
 }
@@ -15,7 +15,7 @@
   border-color: orchid;
 }
 .dropdown option {
-  color: black;
+  color: white;
 }
 .dropdown option:hover {
   background-color: blue;

@@ -1,6 +1,11 @@
 .footer {
-  font-size: x-large;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  font-size: larger;
   color: darkolivegreen;
+  background-color: black;
   font-weight: bold;
   font-style: oblique;
+  padding: 10px;
 }
