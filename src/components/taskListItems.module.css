@@ -1,5 +1,37 @@
-.data{
-    color: darkblue;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: 100;
+.data {
+  color: darkblue;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 100;
+}
+
+li {
+  font: 16px;
+  list-style: none;
+  margin: 20px 5px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li.completed {
+  background-color: rgb(32, 187, 32);
+  box-shadow: 2px 0px 8px 2px rgb(158, 237, 79);
+}
+
+li.pending {
+  background-color: rgb(229, 106, 106);
+  box-shadow: 2px 0px 8px 2px lightcoral;
+}
+
+button.delete,
+button.toggle {
+  border: 0px;
+  border-radius: 5px;
+  background-color: blue;
+  color: #ffffff;
+  padding: 5px 10px;
+  cursor: pointer;
 }

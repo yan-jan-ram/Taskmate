@@ -58,8 +58,8 @@ const AddTask = ({ tasks, setTasks }) => {
           <button className={style.reset} type="button" onClick={handleReset}>
             Reset
           </button>
-          <p>Task: {task}</p>
-          <p>Task-Length: {task.length}</p>
+          <p>Text: {task}</p>
+          <p>Text-Length: {task.length}</p>
         </form>
       </section>
     </div>

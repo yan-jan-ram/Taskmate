@@ -11,6 +11,7 @@
 }
 
 ul {
+  background-color: bisque;
   max-width: 600px;
   margin: 50px auto;
   padding: 20px;
@@ -18,39 +19,30 @@ ul {
     rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
 
-li {
-  font: 16px;
-  list-style: none;
-  margin: 20px 5px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-  border-radius: 5px;
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-li.married {
-  background-color: chartreuse;
-  box-shadow: rgb(158, 237, 79) 0px 1px 4px;
-}
-
-li.single {
-  background-color: coral;
-  box-shadow: lightcoral 1px 2px 4px;
-}
-
-button.delete,
-button.toggle {
-  border: 0px;
-  border-radius: 5px;
-  background-color: blue;
-  color: #ffffff;
-  padding: 5px 10px;
-  cursor: pointer;
-}
-
 button.toggle {
   margin-left: 48%;
   background-color: #4889d7;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  column-gap: 10px;
+}
+
+.buttons button {
+  width: fit-content;
+  padding: 6px 12px;
+  border: none;
+  cursor: pointer;
+}
+
+.buttons button.completed {
+  background-color: rgb(32, 187, 32);
+}
+
+.buttons button.pending {
+  background-color: rgb(229, 106, 106);
 }
